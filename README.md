@@ -1,31 +1,27 @@
 ## Preparation
 
-1. Downloading datasets from [here](https://github.com/cleverhans-lab/cleverhans/tree/master/cleverhans_v3.1.0/examples/nips17_adversarial_competition/dataset) to the dataset folder.
-
-2. Download the models from [here](https://github.com/ylhz/tf_to_pytorch_model) to the models folder.
+1. Downloading datasets from [here](https://drive.google.com/drive/folders/1b4GmVfnYhV7BmGM21E7harBJ2fqCuM6z?usp=sharing) .
+2. Download the models from [here](https://drive.google.com/drive/folders/1YYpdg1uApinKrAqw7XF1XiQKRhG5GFi_?usp=sharing) .
+3. You can also download [NRP](https://drive.google.com/drive/folders/1F43MNFqJ6I5ph4z_gxZignxcTWx4HXfg?usp=sharing) and [RS](https://drive.google.com/drive/folders/1iZIDHnfCEVu_pEM8CO3XQtdrUklGzddx?usp=sharing) defense methods for attacks.
 
 ## Implementation
 
-Run commands directly such as:
+- Run commands directly such as:
+
 
 ```python
-python SPA_MI_FGSM.py
+python SPA_MI_COZ.py
 ```
 
-The produced adversarial samples are then saved to the specified folder and we then run the following command to evaluate them:
+- The produced adversarial examples are saved to the specified folder and then run the following command to evaluate them:
+
 
 ```python
 python evaluate.py
 ```
 
+- The following instructions can be used to attack six defense methods: R&P, Bit Red, JPEG, FD, RS, and NRP.
 
-We have implemented R&P, Bit-Red, JPEG and FD, RS and NRP we provide references as follows：
-
-+ RS: https://github.com/locuslab/smoothing. 
-+ NRP: https://github.com/Muzammal-Naseer/NRP. 
-
-After creating the adversarial examples, you can run the following command directly:
-
-```python
-python evaluate_RP.py
+```
+python evaluate_FD.py
 ```
